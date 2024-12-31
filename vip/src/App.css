@@ -16,6 +16,12 @@ body {
   height: 100vh; /* Full screen height */
   padding: 20px;
 }
+.Projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+}
 
 @keyframes App-logo-spin {
   from {

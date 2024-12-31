@@ -4,15 +4,15 @@ import { AppBar, IconButton, Tab, Toolbar, Tabs, colors } from "@mui/material";
 import About from "./About.tsx";
 import Projects from "./Projects.tsx";
 import Contact from "./Contact.tsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
-  const [activeTab, setActiveTab] = useState("about"); // Track the active tab
+  const [activeTab, setActiveTab] = useState("about");
 
   // Handle Tab Click
   const handleTabChange = (event, newValue) => {
-    setActiveTab(newValue); // Update the active tab
+    setActiveTab(newValue);
   };
 
   return (
@@ -23,6 +23,7 @@ const App = () => {
             <Tab label="About" value="about" sx={{ color: "white" }} />
             <Tab label="Projects" value="projects" sx={{ color: "white" }} />
             <Tab label="Contact" value="contact" sx={{ color: "white" }} />
+            <Tab label="Resume" sx={{ color: "white" }} />
           </Tabs>
         </AppBar>
       </div>
